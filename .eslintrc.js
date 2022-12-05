@@ -11,4 +11,15 @@ module.exports = {
     },
     plugins: ['@typescript-eslint'],
     ignorePatterns: ['**/*.js'],
+    rules: {
+        '@typescript-eslint/ban-types': [
+            'error',
+            {
+                extendDefaults: true,
+                types: {
+                    '{}': false,
+                },
+            },
+        ],
+    },
 };
